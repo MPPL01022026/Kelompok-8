@@ -15,13 +15,6 @@ Mata kuliah Manajemen Proyek Perangkat Lunak (MPPL).
 
 ---
 
-## ☕ Logo Alternatif
-<p align="center">
-  <img src="assets/logo.svg" alt="Logo" width="100">
-</p>
-
----
-
 ## 📌 Project Overview
 Proyek ini bertujuan untuk mengembangkan sistem yang membantu kasir dalam mencatat dan mengelola pesanan pelanggan, menghitung total pembayaran, memantau status pesanan secara realtime, hingga menyajikan laporan penjualan.
 
@@ -44,4 +37,4 @@ Proyek ini bertujuan untuk mengembangkan sistem yang membantu kasir dalam mencat
 ---
 
 ### 📄 Dokumentasi Tambahan
-* Jika ingin melihat banner statis versi JPG, dapat diakses via `assets/banner1.jpg`.
+* Banner statis versi JPG dapat diakses melalui `assets/banner1.jpg`.
