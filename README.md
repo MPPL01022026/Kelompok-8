@@ -1,19 +1,35 @@
-<!-- Banner Utama -->
+<!-- Header & Logo MR. COFFEE -->
 <p align="center">
-  <img src="assets/banner1.jpg" alt="Banner Sistem Pengelolaan Pesanan" width="100%">
+  <img src="assets/logo-MR.svg" alt="Logo MR. COFFEE" width="120">
 </p>
 
+<!-- Banner Animasi Utama (SVG) -->
+<p align="center">
+  <img src="assets/banner-svg.svg" alt="Banner Sistem Pengelolaan Pesanan" width="100%">
+</p>
+
+<!-- Judul Project -->
 # Kelompok 8 - Sistem Pengelolaan Pesanan pada UMKM Warung Kopi
 
 Mata kuliah Manajemen Proyek Perangkat Lunak (MPPL).
 
+---
+
+## ☕ Logo Alternatif
+<p align="center">
+  <img src="assets/logo.svg" alt="Logo" width="100">
+</p>
+
+---
+
 ## 📌 Project Overview
-Proyek ini bertujuan untuk mengembangkan sistem yang membantu kasir dalam mencatat dan mengelola pesanan pelanggan, menghitung total pembayaran, memantau status pesanan, serta menyimpan riwayat transaksi.
+Proyek ini bertujuan untuk mengembangkan sistem yang membantu kasir dalam mencatat dan mengelola pesanan pelanggan, menghitung total pembayaran, memantau status pesanan secara realtime, hingga menyajikan laporan penjualan.
 
 ---
 
 ## 👥 Tim Pengembang
 
+<!-- Banner Tim Pengembang (JPG) -->
 <p align="center">
   <img src="assets/banner2.jpg" alt="Tim Pengembang Kelompok 8" width="100%">
 </p>
@@ -24,7 +40,8 @@ Proyek ini bertujuan untuk mengembangkan sistem yang membantu kasir dalam mencat
 | **Rizqi Ananda** | Developer (Backend & Database) |
 | **Irma Safitri** | Developer (Frontend / UI) |
 | **Jean Mosena** | Developer (Tester / QA) |
-- [ ] Sprint 2 — Requirements & Design
-- [ ] Sprint 3 — Development
-- [ ] Sprint 4 — Testing & Finalization
 
+---
+
+### 📄 Dokumentasi Tambahan
+* Jika ingin melihat banner statis versi JPG, dapat diakses via `assets/banner1.jpg`.
