@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <!-- Styles & CSS Animations -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap');
+      
+      .text-title {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 800;
+        fill: #FFFFFF;
+      }
+      .text-sub {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+        fill: #D4A373;
+      }
+      .text-desc {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 400;
+        fill: #E6CCB2;
+      }
+      
+      /* Animasi Uap Kopi */
+      @keyframes steam {
+        0% { transform: translateY(0) scaleX(1); opacity: 0; }
+        15% { opacity: 0.6; }
+        50% { transform: translateY(-25px) scaleX(1.2); opacity: 0.4; }
+        95% { opacity: 0; }
+        100% { transform: translateY(-45px) scaleX(1.5); opacity: 0; }
+      }
+      .steam-line-1 { animation: steam 3.5s infinite linear; }
+      .steam-line-2 { animation: steam 3.5s infinite linear 1.2s; }
+      .steam-line-3 { animation: steam 3.5s infinite linear 2.4s; }
+
+      /* Animasi Floating Logo Stamp */
+      @keyframes floatLogo {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-12px) rotate(1deg); }
+      }
+      .floating-logo {
+        animation: floatLogo 5s ease-in-out infinite;
+        transform-origin: 300px 315px;
+      }
+
+      /* Animasi Glowing Text */
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 10px rgba(230,204,178,0.2)); }
+        50% { opacity: 1; filter: drop-shadow(0 0 25px rgba(230,204,178,0.6)); }
+      }
+      .glow-text {
+        animation: pulseGlow 3s ease-in-out infinite;
+      }
+
+      /* Animasi Biji Kopi Mengambang */
+      @keyframes floatBean {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-15px) rotate(10deg); }
+      }
+      .bean-1 { animation: floatBean 6s ease-in-out infinite; transform-origin: center; }
+      .bean-2 { animation: floatBean 8s ease-in-out infinite 1s; transform-origin: center; }
+    </style>
+
+    <!-- Background Gradients -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#2C1810" />
+      <stop offset="60%" stop-color="#1A0F0A" />
+      <stop offset="100%" stop-color="#0D0705" />
+    </radialGradient>
+
+    <radialGradient id="glowWarm" cx="30%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#D4A373" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#D4A373" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Stamp/Badge Gradient -->
+    <linearGradient id="stampGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E6CCB2" />
+      <stop offset="100%" stop-color="#B08968" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <circle cx="300" cy="315" r="380" fill="url(#glowWarm)" />
+
+  <!-- Biji Kopi Dekorasi Background -->
+  <g class="bean-1" opacity="0.15">
+    <path d="M100 120 C70 90, 70 50, 100 30 C130 10, 160 30, 150 70 C140 110, 120 130, 100 120 Z" fill="#E6CCB2" />
+    <path d="M105 35 Q125 70 115 115" stroke="#1A0F0A" stroke-width="4" fill="none" />
+  </g>
+  <g class="bean-2" opacity="0.12">
+    <path d="M1080 520 C1050 490, 1050 450, 1080 430 C1110 410, 1140 430, 1130 470 C1120 510, 1100 530, 1080 520 Z" fill="#E6CCB2" />
+    <path d="M1085 435 Q1105 470 1095 515" stroke="#1A0F0A" stroke-width="4" fill="none" />
+  </g>
+
+  <!-- LEFT COLUMN: STAMP & STEAM ANIMATION -->
+  <g class="floating-logo">
+    <!-- Uap Kopi (Steam Effect) -->
+    <g transform="translate(300, 80)">
+      <path class="steam-line-1" d="M -20 30 Q -30 10 -15 -10 T -20 -40" stroke="#E6CCB2" stroke-width="4" fill="none" stroke-linecap="round" />
+      <path class="steam-line-2" d="M 0 30 Q 10 10 0 -10 T 5 -40" stroke="#E6CCB2" stroke-width="5" fill="none" stroke-linecap="round" />
+      <path class="steam-line-3" d="M 20 30 Q 10 10 25 -10 T 15 -40" stroke="#E6CCB2" stroke-width="4" fill="none" stroke-linecap="round" />
+    </g>
+
+    <!-- Main Stamp Circle -->
+    <circle cx="300" cy="315" r="175" fill="url(#stampGrad)" stroke="#7F5539" stroke-width="8" filter="drop-shadow(0px 15px 25px rgba(0,0,0,0.6))" />
+    <circle cx="300" cy="315" r="162" fill="none" stroke="#7F5539" stroke-width="3" stroke-dasharray="8,6" />
+    <circle cx="300" cy="315" r="152" fill="none" stroke="#7F5539" stroke-width="2" />
+
+    <!-- Teks Melengkung Atas -->
+    <path id="textArcTop" d="M 160 315 A 140 140 0 0 1 440 315" fill="none" />
+    <text font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="30" fill="#2C1810" letter-spacing="4">
+      <textPath href="#textArcTop" startOffset="50%" text-anchor="middle">MR. COFFEE</textPath>
+    </text>
+
+    <!-- Icon Orang / Barista (Pusat Stamp) -->
+    <g transform="translate(300, 295)">
+      <!-- Kepala & Kacamata -->
+      <circle cx="0" cy="-25" r="22" fill="#2C1810" />
+      <circle cx="-9" cy="-27" r="7" fill="none" stroke="#E6CCB2" stroke-width="2.5" />
+      <circle cx="9" cy="-27" r="7" fill="none" stroke="#E6CCB2" stroke-width="2.5" />
+      <line x1="-2" y1="-27" x2="2" y2="-27" stroke="#E6CCB2" stroke-width="2.5" />
+      <!-- Kumis -->
+      <path d="M -12 -12 Q -5 -8 0 -13 Q 5 -8 12 -12 Q 6 -4 0 -6 Q -6 -4 -12 -12 Z" fill="#E6CCB2" />
+      <!-- Badan / Jas -->
+      <path d="M -35 25 C -35 0, -20 -5, 0 -5 C 20 -5, 35 0, 35 25 Z" fill="#2C1810" />
+      <path d="M 0 -5 L -8 20 L 0 25 L 8 20 Z" fill="#E6CCB2" />
+    </g>
+
+    <!-- Teks Bawah Stamp -->
+    <path id="textArcBottom" d="M 440 315 A 140 140 0 0 1 160 315" fill="none" />
+    <text font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="14" fill="#2C1810" letter-spacing="3">
+      <textPath href="#textArcBottom" startOffset="50%" text-anchor="middle">PREMIUM QUALITY • EST 2026</textPath>
+    </text>
+  </g>
+
+  <!-- RIGHT COLUMN: CONTENT & TITLE -->
+  <g transform="translate(540, 130)">
+    <!-- Badge Kategori -->
+    <rect x="0" y="0" width="220" height="36" rx="18" fill="#D4A373" fill-opacity="0.15" stroke="#D4A373" stroke-width="1.5" />
+    <text x="110" y="23" class="text-sub" font-size="13" text-anchor="middle" letter-spacing="1.5">☕ APLIKASI KASIR &amp; MANAJEMEN</text>
+
+    <!-- Judul Utama (Glowing Effect) -->
+    <g class="glow-text">
+      <text x="0" y="115" class="text-title" font-size="54" letter-spacing="1">SISTEM PENGELOLAAN</text>
+      <text x="0" y="175" class="text-title" font-size="54" fill="#D4A373" letter-spacing="1">PESANAN</text>
+    </g>
+
+    <!-- Deskripsi Sistem -->
+    <text x="0" y="230" class="text-desc" font-size="17" width="600">
+      <tspan x="0" dy="0">Solusi digital pengelola warung kopi terpadu. Mempercepat</tspan>
+      <tspan x="0" dy="26">transaksi POS, pencatatan otomatis katalog menu, tracking</tspan>
+      <tspan x="0" dy="26">status pesanan secara realtime, hingga laporan penjualan.</tspan>
+    </text>
+
+    <!-- Divider Line -->
+    <line x1="0" y1="315" x2="580" y2="315" stroke="#7F5539" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="6,6" />
+
+    <!-- Tech Stack Badges -->
+    <g transform="translate(0, 345)">
+      <!-- PHP -->
+      <g transform="translate(0, 0)">
+        <rect width="110" height="42" rx="10" fill="#1A0F0A" stroke="#777BB4" stroke-width="1.5" />
+        <text x="55" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" fill="#8892BF" text-anchor="middle">PHP 8</text>
+      </g>
+      <!-- Laravel -->
+      <g transform="translate(125, 0)">
+        <rect width="125" height="42" rx="10" fill="#1A0F0A" stroke="#FF2D20" stroke-width="1.5" />
+        <text x="62" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" fill="#FF2D20" text-anchor="middle">Laravel</text>
+      </g>
+      <!-- MySQL -->
+      <g transform="translate(265, 0)">
+        <rect width="115" height="42" rx="10" fill="#1A0F0A" stroke="#00758F" stroke-width="1.5" />
+        <text x="57" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" fill="#00758F" text-anchor="middle">MySQL</text>
+      </g>
+      <!-- Tailwind CSS -->
+      <g transform="translate(395, 0)">
+        <rect width="145" height="42" rx="10" fill="#1A0F0A" stroke="#38BDF8" stroke-width="1.5" />
+        <text x="72" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" fill="#38BDF8" text-anchor="middle">TailwindCSS</text>
+      </g>
+    </g>
+
+    <!-- Footer Meta Info -->
+    <text x="0" y="430" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="13" fill="#B08968" letter-spacing="2">
+      UMKM WARUNG KOPI • MPPL 2026 • KELOMPOK 8
+    </text>
+  </g>
+</svg>
