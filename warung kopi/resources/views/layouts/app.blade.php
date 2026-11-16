@@ -15,6 +15,7 @@
         <div class="flex flex-wrap items-center gap-4 text-sm font-semibold">
             <a href="{{ route('dashboard') }}" class="rounded py-3 text-stone-600 hover:text-stone-900 focus-visible:outline-2 focus-visible:outline-offset-4 dark:text-stone-300 dark:hover:text-white">Dashboard</a>
             @if (auth()->user()->role === 'kasir')
+                <a href="{{ route('order.form') }}" @if (request()->routeIs('order.form')) aria-current="page" @endif class="rounded py-3 text-amber-800 focus-visible:outline-2 focus-visible:outline-offset-4 dark:text-amber-300">Buat pesanan</a>
                 <a href="{{ route('menu.manage') }}" @if (request()->routeIs('menu.manage')) aria-current="page" @endif class="rounded py-3 text-amber-800 focus-visible:outline-2 focus-visible:outline-offset-4 dark:text-amber-300">Kelola menu</a>
             @endif
             <form method="POST" action="{{ route('logout') }}">@csrf<button type="submit" class="min-h-11 rounded-lg border border-stone-300 px-4 hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 dark:border-stone-600 dark:hover:bg-stone-800">Keluar</button></form>

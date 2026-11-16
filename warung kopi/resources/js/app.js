@@ -1,3 +1,5 @@
+import './order-create';
+
 const app = document.getElementById('menu-app');
 
 if (app) {
