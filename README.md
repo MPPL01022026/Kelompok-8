@@ -25,6 +25,12 @@
 
 ---
 
+## 📋 Manajemen Proyek
+
+Pantau backlog, sprint, dan tugas tim melalui **[Jira Board — Proyek MSP](https://kurniawaniqbal241.atlassian.net/jira/software/projects/MSP/boards/2)**. Akses memerlukan akun yang memiliki izin pada proyek Jira.
+
+---
+
 ## 📌 Latar Belakang & Permasalahan
 
 Warung kopi merupakan salah satu jenis UMKM yang memiliki aktivitas transaksi cukup tinggi, terutama pada saat jam ramai. Dalam prosesnya, pelanggan menyampaikan pesanan kepada kasir, kemudian kasir mencatat pesanan secara manual sebelum diteruskan kepada bagian yang menyiapkan pesanan.
