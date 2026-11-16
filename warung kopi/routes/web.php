@@ -18,6 +18,7 @@ Route::middleware(['auth', EnsureActiveUser::class])->group(function () {
     // Halaman sementara sampai dashboard fitur Irma/Rizqi siap diintegrasikan.
     Route::view('/dashboard', 'dashboard')->name('dashboard');
     Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
+    Route::view('/pesanan/buat', 'order.create')->middleware(EnsureCashier::class)->name('order.form');
     Route::get('/menu', fn () => view('menu.index', [
         'categories' => Category::query()->orderBy('name')->get(['id', 'name']),
     ]))->middleware(EnsureCashier::class)->name('menu.manage');
