@@ -17,3 +17,5 @@ Route::middleware(['auth', EnsureActiveUser::class])->group(function () {
     Route::view('/dashboard', 'dashboard')->name('dashboard');
     Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
 });
+
+require __DIR__.'/menu-backend.php';
