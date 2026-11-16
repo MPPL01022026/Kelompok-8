@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Middleware\EnsureActiveUser;
+use App\Http\Middleware\EnsureCashier;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', fn () => redirect()->route('dashboard'));
@@ -16,6 +18,9 @@ Route::middleware(['auth', EnsureActiveUser::class])->group(function () {
     // Halaman sementara sampai dashboard fitur Irma/Rizqi siap diintegrasikan.
     Route::view('/dashboard', 'dashboard')->name('dashboard');
     Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
+    Route::get('/menu', fn () => view('menu.index', [
+        'categories' => Category::query()->orderBy('name')->get(['id', 'name']),
+    ]))->middleware(EnsureCashier::class)->name('menu.manage');
 });
 
 require __DIR__.'/menu-backend.php';
