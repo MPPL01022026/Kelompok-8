@@ -24,3 +24,5 @@ Route::middleware(['auth', EnsureActiveUser::class])->group(function () {
 });
 
 require __DIR__.'/menu-backend.php';
+
+require __DIR__.'/order-backend.php';
