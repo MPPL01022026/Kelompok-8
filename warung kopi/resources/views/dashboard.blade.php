@@ -18,6 +18,9 @@
     <h1>Selamat datang,<br><span>{{ auth()->user()->name }}.</span></h1>
     <p>Anda berhasil masuk ke sistem MR. COFFEE.</p>
     <section class="placeholder-card" aria-labelledby="next-title"><div class="placeholder-icon" aria-hidden="true">✦</div><div><h2 id="next-title">Dashboard dalam pengembangan</h2><p>Halaman ini adalah tempat sementara setelah login. Fitur operasional akan tersedia setelah modul tim terintegrasi.</p></div></section>
+    @if (auth()->user()->role === 'kasir')
+        <p><a href="{{ route('menu.manage') }}">Kelola menu &rarr;</a></p>
+    @endif
 </main>
 </body>
 </html>
